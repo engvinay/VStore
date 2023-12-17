@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="./style.css" />
+  <title>Vstore</title>
+</head>
+
+<body>
+  
+  <!-- HEADER -->
+
+ <header class="header">
+  <nav>
+    <img src="data:image/jpeg;base64,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"  class="logob">
+    <ul>
+        <h6  <span class="dis">V</span></h1>
+    store</span></br></h3>
+         <br />
+           
+            
+
+        <li><a href="">HOME</a></li>
+        <li><a href="">ABOUT US</a></li>
+        <li><a href="">CONTACT US</a></li>
+      
+            
+
+    </ul>
+    </nav>
+    <!-- Intro -->
+    <div class="intro">
+     <h1>TRY OUT THESE LEATHER PRODUCTS</h1>
+          <h2>
+            Up to</br>
+            <span class="dis">30% 
+              Discount</span></br>
+            on This <br />
+            New Year Season
+          </h2>
+          <h3>From 1st Jan to 31st Jan</h3>
+          <a href="#" class="btn">SHOP NOW</a>
+        </div>
+      
+  </header>
+
+  <!--Benefits  -->
+  <section class="section benefits">
+    <div class="benefit-center box">
+      <div class="benefit">
+        <span class="icon"><i class="bx bx-purchase-tag"></i></span>
+        <h4>Free Shipping</h4>
+        <span class="text">Capped at $16 per order</span>
+      </div>
+
+     
+      <div class="benefit">
+        <span class="icon"><i class="bx bx-book-reader"></i></span>
+        <h4>10-Day Returns</h4>
+        <span class="text">Shop without any fear</span>
+      </div>
+
+      <div class="benefit">
+        <span class="icon"><i class="bx bx-headphone"></i></span>
+        <h4>24/7 Support</h4>
+        <span class="text">We are always there to help you</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <section class="section">
+    <div class="h">
+      <h1><span>New</span> Arrivals</h1>
+    </div>
+    <div class="ac-center box">
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://rukminim2.flixcart.com/image/850/1000/km3s1ow0/sling-bag/a/u/y/women-s-genuine-leather-handbags-shoulder-bag-top-handle-satchel-original-imagf35gvhcwzggk.jpeg?q=90" alt="" />
+        </div>
+        <p>Women handbag leather</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <div class="price">Rs.5000</div>
+      </div>
+
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://images.meesho.com/images/products/250382504/anhpr_512.webp" alt="" />
+        </div>
+        <p>Women Sandals 2021</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.3000</div>
+      </div>
+
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://images.unsplash.com/photo-1614330315526-166f2d71e544?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdhbGxldHxlbnwwfHwwfHx8MA%3D%3D" alt="" />
+        </div>
+        <p>Luxuary wallet purse </p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.2000</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://mirzacdns3.s3.ap-south-1.amazonaws.com/cache/catalog/RBL1004/8-800x800.jpg" alt="" />
+        </div>
+        <p>Leather belt</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.1500</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://www.bigbasket.com/media/uploads/p/l/40233028-7_2-aimil-jufex-forte-syrup-provides-relief-from-cough-sore-throat.jpg" alt="" />
+        </div>
+        <p>Jufex Forte cough medicine</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.30,000</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://indiacircus.com/pub/media/catalog/product/cache/1/image/e9c3970ab036de70892d86c6d221abfe/i/n/india-circus-phulari-cotton-quilt-28430-1.jpg" alt="" />
+        </div>
+        <p>Quilt</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs3,000</div>
+      </div>
+     
+      
+    </div>
+    </div>
+  </section>
+
+  
+  <!-- Popular Products -->
+  <section class="section">
+    <div class="h">
+      <h1>Popular <span>Products</span></h1>
+    </div>
+    <div class="ac-center box">
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://cdn.hammondsflycatcher.com/wp-content/uploads/2023/07/19132137/0W8A5786.jpg" alt="" />
+        </div>
+        <p>Luxuary Leather hand bag-black</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.8500</div>
+      </div>
+
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://mardigras.co.in/wp-content/uploads/2023/02/1-1-4.jpg" alt="" />
+        </div>
+        <p>Covered leather sandal</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.5000</div>
+      </div>
+
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://rukminim2.flixcart.com/image/850/1000/kq8dua80/bag/v/3/j/big-capacity-pencil-pen-case-bag-pouch-holder-for-middle-high-original-imag4ahgvvyqdgfq.jpeg?q=90" alt="" />
+        </div>
+        <p>Pencil Box</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.1200</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://m.media-amazon.com/images/I/41Fal-gijNL._AC_UY1000_.jpg" alt="" />
+        </div>
+        <p>Ladies wallet-purple</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.2000</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://tiimg.tistatic.com/fp/1/008/399/multi-color-long-length-ladies-skirt-for-casual-wear-026.jpg" alt="" />
+        </div>
+        <p>Ladies skirt</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.3200</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://5.imimg.com/data5/DK/FA/NX/GLADMIN-51628136/mens-denim-skinny-jeans-500x500.jpg" alt="" />
+        </div>
+        <p>Men jeans</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.1600</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://5.imimg.com/data5/XH/KM/MY-4724975/kids-night-suit.jpg" alt="" />
+        </div>
+        <p>Children night suit</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.5600</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://wallmantra.com/wp-content/uploads/frantic-trading-pvt-ltd-soft-toys-bow-tie-soft-premium-blue-big-teddy-bear-32308222492838.jpg" alt="" />
+        </div>
+        <p>Teddy bear</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.1500</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="https://i.pinimg.com/736x/6a/84/f7/6a84f70e09fcf245c676e1efa22ece9f.jpg" alt="" />
+        </div>
+        <p>Pashmina Shawl</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Rs.1,60,500</div>
+      </div>
+    </div>
+  </section>
+
+        <!-----footer-------------------->
+        <section id="footer">
+            
+            <div class="foot">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">CONTACT US</a></li>
+        
+                </ul>
+
+                <div class="social-links">
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href=""><i class="fab fa-behance"></i></a>
+                    <a href=""><i class="fab fa-dribbble"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-snapchat"></i></a>
+                    <a href=""><i class="fab fa-chrome"></i></a>
+
+                  </div>
+            </div>
+        </section>
+      
+</body>
+
+</html>
